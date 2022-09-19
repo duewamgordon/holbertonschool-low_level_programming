@@ -5,7 +5,7 @@
  *
  * Return: Always 0 (Success)
  */
-int main()
+int main(void)
 {
 	char charType;
 	int integerType;
@@ -19,7 +19,7 @@ int main()
 	printf("Size of long long int: %1d sizeof(longlongintType));
 	printf("Size of a float: %1d byte\n" sizeof(floatType));
 
-	return 0;
+	return (0);
 }
 
 
