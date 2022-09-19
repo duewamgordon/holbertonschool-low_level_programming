@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
-#inculde <stdido.h>
+#include <stdido.h>
 
 /**
  * main - #include <stdlib.h>
