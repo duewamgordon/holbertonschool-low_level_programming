@@ -6,7 +6,9 @@
  *
  * Return: Always (Success)
  */
-int _putchar(char c)
+int main(void)
 {
-	return (fwrite(1, &c, 1));
+	_putchar('c');
+
+	return (0)
 }
