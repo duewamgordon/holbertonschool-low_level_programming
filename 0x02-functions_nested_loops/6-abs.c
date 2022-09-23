@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * 
- * _abs(int) - Compute the absolute value of an integer
+ * _abs - Compute the absolute value of an integer
  * @n: The absolute value
  *
  * Return: The absolute value
@@ -12,7 +12,7 @@ int _abs(int n)
 	{
 		int abs_val;
 
-		abs_val  = n  (-1) * n;
+		abs_val  = n * -1;
 		return (abs_val);
 	}
 
