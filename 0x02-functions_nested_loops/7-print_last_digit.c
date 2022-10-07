@@ -4,17 +4,19 @@
  * @n: the digit to print
  * Return: the value of the last digit
  */
-
 int print_last_digit(int n)
-
 {
-	int i;
+	int last;
 
-	i = n % 10;
+	last = n % 10;
 
-	if (i < 0)
+	if (last < 0)
 	{
-		i = i * -1;
+
+		last = last * -1;
 	}
-	_putchar(i + '0');
-	Return(i);
+
+	_putchar(last + '0');
+
+	return (last);
+}
