@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * _strspn - length of string
@@ -22,7 +22,6 @@ unsigned int _strspn(char *s, char *accept)
 	}
 
 	a++;
-}
 
-return (t);
+	return (t);
 }
