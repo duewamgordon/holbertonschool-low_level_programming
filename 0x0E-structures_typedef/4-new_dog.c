@@ -5,12 +5,12 @@ int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
 /**
- * new_dog - ...
- * @name: ...
- * @age: ...
- * @owner: ...
+ * new_dog - makes a new dog
+ * @name: name to create and assign memory to a dog
+ * @age: age to assign to dog
+ * @owner: owner to create mem and ssign to for dog
  *
- * Return: ...
+ * Return: pointer to new dog
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -27,12 +27,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 
 		cutie_dog->name = malloc(sizeof(char) * name_1);
+		{
+			free(cutie_dog);
+			return (NULL);
+		}
 
-		if (cutie_dog->name == NULL)
-																						{
-																							free(cutie_dog);
-																							return (NULL);
-																						}
 		cutie_dog->owner = malloc(sizeof(char) * own_l);
 
 		if (cutie_dog->name = _strcpy(cutie_dog->name, name);
@@ -50,7 +49,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (cutie_dog);
 }
 
-/*
+/**
  * _strlen - Returns the length of a string
  * @s: String to count
  *
@@ -68,7 +67,7 @@ int _strlen(char *s)
 	return (c);
 }
 
-/*
+/**
  * _strcpy - Copy a string
  * @dest: Destination value
  * @src: Source value
