@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFIlE -o main.s
+export CFILE+2-main.c ; ./2-assembler
