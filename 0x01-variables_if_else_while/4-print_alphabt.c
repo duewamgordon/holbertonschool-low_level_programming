@@ -4,7 +4,7 @@
 
 /**
  * main - Prints all letters except q and e
- *Return: Always (Success)
+ *Return: 0.
  **/
 
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
 	e = 'e';
 	q = 'q';
 
-	for (c = 'a'; e <= 'z'; c++)
+	for (c = 'a'; c <= 'z'; c++)
 	{
 	if (c != e && c != q)
 	putchar(c);
