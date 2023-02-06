@@ -1,33 +1,28 @@
 #include "main.h"
 
 /**
- * print_triangle - Print a triangle followed by a new line
- * @size: size of the triangle
- * Return: void
+ * print_triangle - prints the character "#" in a squared triangle shape,
+ *                followed by a new line.
+ * @size: the size of the triangle in lines.
  */
-
-void pirnt_triangle(int size)
+void print_triangle(int size)
 {
-	int i;
-	int j;
+	int row, column;
 
-	if (size > 0)
+	if (size >= 0)
 	{
-		i = 0;
-
-		while (i < size)
-		{
-			j = 0;
-			while (j < 0)
-			{
-				_putchar('$');
-				j++;
-			}
+		if (size == 0)
 			_putchar('\n');
-			i++;
+		for (row = 1; row <= size; row++)
+		{
+			for (column = 1; column <= size; column++)
+				if (column > size - row)
+					_putchar('#');
+				else
+					_putchar(' ');
+			_putchar('\n');
 		}
 	}
-		else
-			_putchar('\n');
+	else
+		_putchar('\n');
 }
-
