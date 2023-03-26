@@ -2,14 +2,14 @@
 #include "lists.h"
 
 /**
- * add_nodeint - add a new node at
+ * add_dnodeint - add a new node at
  * the beginning of a doubly linked list
  * @head: pointer to a pointer to a head
  * @n: the int value of the new node
  * Return: the address of a new element or NULL
  */
 
-dlistint_t *add_nodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *new_node = NULL;
 
