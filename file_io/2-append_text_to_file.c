@@ -1,50 +1,37 @@
 #include "main.h"
 
 /**
- * append_text_to_file - Entry point
- *
- * @filename: Name of file to be accessed
- * @text_content: String to be copied to the end of filename
- *
- * Return: 1 if successful, -1 otherwise
+ * append_text_to_file - function
+ * @filename: var
+ * @text_content: var
+ * Return: value
  */
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	int written;
-	int text_len = strlen(text_content);
+int o, w, len = 0;
 
-	if (filename == NULL)
+if (filename == NULL)
+{
+	return (-1);
+}
+
+if (text_content != NULL)
+{
+	for (len = 0; text_content[len];)
 	{
-		return (-1);
+		len++;
 	}
+}
 
-	fd = open(filename, O_WRONLY | O_APPEND);
+o = open(filename, O_WRONLY | O_APPEND);
+w = write(o, text_content, len);
 
-	if (fd == -1)
-	{
-		return (-1);
-	}
+if (o == -1 || w == -1)
+{
+	return (-1);
+}
 
-	if (text_content == NULL)
-	{
-		close(fd);
-		if (fd == -1)
-		{
-			return (-1);
-		}
-		return (0);
-	}
-
-	written = write(fd, text_content, text_len);
-
-	if (written == -1)
-	{
-		close(fd);
-		return (-1);
-	}
-
-	close(fd);
-	return (1);
+close(o);
+return (1);
 }
