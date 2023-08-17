@@ -15,7 +15,7 @@ int binary_search(int *array, size_t size, int value)
 	size_t i;
 
 	if (array == NULL)
-		return -1;
+		return (-1);
 
 	low = 0;
 	high = (int)size - 1;
@@ -34,12 +34,12 @@ int binary_search(int *array, size_t size, int value)
 		printf("\n");
 
 		if (array[mid] == value)
-			return mid;
+			return (mid);
 		else if (array[mid] < value)
 			low = mid + 1;
 		else
 			high = mid - 1;
 	}
 
-	return -1;
+	return (-1);
 }
